@@ -12,7 +12,7 @@ namespace OOP_Practice
         private string furLength;
         private float height;
         private string speed;
-        private int weight;
+        private double weight;
 
         //Properties
         public string FurLength
@@ -30,7 +30,7 @@ namespace OOP_Practice
             get { return this.speed; }
             set { this.speed = value; }
         }
-        public int Weight
+        public double Weight
         {
             get { return this.weight; }
             set { this.weight = value; }
@@ -41,12 +41,31 @@ namespace OOP_Practice
         {
 
         }
-        
+
         //overloaded Contructor
         public Dog(string furLength, float height)
         {
             this.furLength = furLength;
             this.height = height;
+        }
+
+        //Methods
+        public void Run()
+        {
+            speed = "getting faster";
+            weight--;
+        }
+        public void Bark()
+        {
+            Console.WriteLine("\a");
+        }
+        public void Potty()
+        {
+            weight -= 0.1;
+        }
+        public void Groom()
+        {
+            furLength = "all cleaned up. ";
         }
     }
 }
